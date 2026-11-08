@@ -1,11 +1,9 @@
 {
-  "name": "nexussphere-frontend",
+  "name": "nexus-sphere",
   "version": "0.1.0",
   "scripts": {
-    "test": "echo 'No tests configured yet'",
-    "build": "echo 'Build process initialized'"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0"
+    "build": "echo 'Build skipped: Rust core pre-compiled'",
+    "test": "node --test tests/smoke_test.js",
+    "smoke": "node --test tests/smoke_test.js"
   }
 }
