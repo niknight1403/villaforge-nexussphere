@@ -1,9 +1,12 @@
 {
   "name": "nexus-sphere",
   "version": "0.1.0",
+  "description": "NexusSphere Autonomous Agent Mesh",
   "scripts": {
-    "build": "echo 'Build skipped: Rust core pre-compiled'",
+    "build": "node -e \"console.log('Build skipped: Rust core pre-compiled or managed via Docker.'); process.exit(0);\"",
     "test": "node --test tests/smoke_test.js",
-    "smoke": "node --test tests/smoke_test.js"
-  }
+    "smoke": "node tests/smoke_test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }
