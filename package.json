@@ -1,0 +1,11 @@
+{
+  "name": "nexussphere-frontend",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo 'No tests configured yet'",
+    "build": "echo 'Build process initialized'"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

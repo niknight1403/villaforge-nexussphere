@@ -1,0 +1,10 @@
+[package]
+name = "nexussphere-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1.0", features = ["full"] }
+ring = "0.17"
+serde = { version = "1.0", features = ["derive"] }

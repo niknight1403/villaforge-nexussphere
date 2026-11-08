@@ -1,0 +1,12 @@
+{
+  "name": "nexus-sphere-desktop",
+  "version": "0.1.0",
+  "main": "main.ts",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "typescript": "^5.0.0"
+  }
+}
