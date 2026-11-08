@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nexus-sphere-core
+  labels:
+    app: nexus-sphere
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nexus-sphere
+  template:
+    metadata:
+      labels:
+        app: nexus-sphere
+    spec:
+      containers:
+      - name: nexus-core
+        image: nexus-sphere/core:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: RUST_LOG
+          value: info
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: nexus-sphere-service
+spec:
+  selector:
+    app: nexus-sphere
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
